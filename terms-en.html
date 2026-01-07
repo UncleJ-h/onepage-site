@@ -7,95 +7,141 @@
     <meta name="description" content="One Page App Terms of Service.">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #faf9f7;
+            --text: #1a1a1a;
+            --text-light: #666;
+            --text-muted: #999;
+            --border: #e8e6e0;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", Georgia, sans-serif;
+            font-family: Georgia, "Times New Roman", serif;
             line-height: 1.8;
-            color: #2c2c2c;
-            background: #faf9f7;
+            color: var(--text);
+            background: var(--bg);
             min-height: 100vh;
         }
+
+        .lang-switch {
+            position: fixed;
+            top: 24px;
+            right: 24px;
+            font-size: 14px;
+            z-index: 100;
+        }
+
+        .lang-switch a {
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+
+        .lang-switch a:hover {
+            color: var(--text);
+        }
+
         main {
             max-width: 640px;
             margin: 0 auto;
-            padding: 80px 32px 64px;
+            padding: 80px 24px 64px;
         }
+
         .breadcrumb {
             font-size: 14px;
-            color: #999;
-            margin-bottom: 40px;
-        }
-        .breadcrumb a {
-            color: #666;
-            text-decoration: none;
-        }
-        .breadcrumb a:hover { color: #1a1a1a; }
-        h1 {
-            font-size: 36px;
-            font-weight: 400;
-            letter-spacing: 0.02em;
-            margin-bottom: 16px;
-            color: #1a1a1a;
-        }
-        .updated {
-            font-size: 14px;
-            color: #999;
+            color: var(--text-muted);
             margin-bottom: 48px;
         }
 
-        h2 {
-            font-size: 20px;
-            font-weight: 500;
-            margin-top: 48px;
-            margin-bottom: 16px;
-            color: #1a1a1a;
+        .breadcrumb a {
+            color: var(--text-light);
+            text-decoration: none;
         }
+
+        .breadcrumb a:hover {
+            color: var(--text);
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 400;
+            margin-bottom: 16px;
+        }
+
+        .updated {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 64px;
+        }
+
+        /* Content */
+        .section-title {
+            font-size: 12px;
+            color: var(--text-muted);
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            margin-top: 48px;
+            margin-bottom: 24px;
+        }
+
+        .section-title:first-of-type {
+            margin-top: 0;
+        }
+
         p {
             font-size: 16px;
-            color: #444;
+            color: var(--text-light);
             margin-bottom: 16px;
         }
+
         ul {
             margin-left: 24px;
             margin-bottom: 16px;
         }
+
         li {
             font-size: 16px;
-            color: #444;
+            color: var(--text-light);
             margin-bottom: 8px;
         }
 
-        .contact {
-            margin-top: 48px;
-            padding-top: 32px;
-            border-top: 1px solid #e0ded8;
-        }
-        .contact a {
-            color: #666;
+        a {
+            color: var(--text-light);
         }
 
+        /* Contact */
+        .contact {
+            margin-top: 64px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border);
+        }
+
+        /* Footer */
         footer {
             text-align: center;
-            padding: 48px 24px;
-            color: #999;
-            font-size: 14px;
-            border-top: 1px solid #e0ded8;
-            margin-top: 64px;
-        }
-        footer a {
-            color: #666;
-            text-decoration: none;
-            margin: 0 16px;
+            padding: 64px 24px;
+            border-top: 1px solid var(--border);
+            margin-top: 80px;
         }
 
-        .lang-switch {
-            position: absolute;
-            top: 24px;
-            right: 24px;
+        footer nav {
+            margin-bottom: 24px;
+        }
+
+        footer a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin: 0 16px;
             font-size: 14px;
         }
-        .lang-switch a {
-            color: #999;
-            text-decoration: none;
+
+        footer a:hover {
+            color: var(--text);
+        }
+
+        footer .copyright {
+            font-size: 12px;
+            color: var(--text-muted);
         }
     </style>
 </head>
@@ -110,10 +156,10 @@
         <h1>Terms of Service</h1>
         <p class="updated">Last updated: January 7, 2026</p>
 
-        <h2>1. Acceptance of Terms</h2>
+        <p class="section-title">1. Acceptance of Terms</p>
         <p>By downloading, installing, or using the "One Page" application (the "App"), you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the App.</p>
 
-        <h2>2. Service Description</h2>
+        <p class="section-title">2. Service Description</p>
         <p>One Page is a card-based reading application that provides a randomized, card-style reading experience of historical texts. The App offers the following features:</p>
         <ul>
             <li>Random display of text cards</li>
@@ -122,7 +168,7 @@
             <li>Generate card images for sharing</li>
         </ul>
 
-        <h2>3. Purchases and Payment</h2>
+        <p class="section-title">3. Purchases and Payment</p>
         <p>One Page offers a one-time purchase option to unlock all card content. Purchases are processed through the Apple App Store and are subject to Apple's terms of service.</p>
         <p>Pricing:</p>
         <ul>
@@ -131,10 +177,10 @@
         </ul>
         <p>After purchase, you will have permanent access to the purchased content.</p>
 
-        <h2>4. Refund Policy</h2>
-        <p>All purchases are processed through the Apple App Store. Refund requests must be submitted directly to Apple. Please visit <a href="https://reportaproblem.apple.com" style="color: #666;">reportaproblem.apple.com</a>.</p>
+        <p class="section-title">4. Refund Policy</p>
+        <p>All purchases are processed through the Apple App Store. Refund requests must be submitted directly to Apple. Please visit <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
 
-        <h2>5. Content Disclaimer</h2>
+        <p class="section-title">5. Content Disclaimer</p>
         <p>The text content displayed in One Page is sourced from publicly available historical documents. We:</p>
         <ul>
             <li>Do not provide interpretation or commentary on the original texts</li>
@@ -143,10 +189,10 @@
         </ul>
         <p>The App serves only as a text display tool. Users are responsible for their own understanding and use of the content.</p>
 
-        <h2>6. Intellectual Property</h2>
+        <p class="section-title">6. Intellectual Property</p>
         <p>The design, code, icons, and other original content of the One Page App are owned by the developer. The historical texts displayed in the App are in the public domain.</p>
 
-        <h2>7. Usage Restrictions</h2>
+        <p class="section-title">7. Usage Restrictions</p>
         <p>You agree not to:</p>
         <ul>
             <li>Reverse engineer, decompile, or disassemble the App</li>
@@ -154,30 +200,32 @@
             <li>Use the App for any illegal purpose</li>
         </ul>
 
-        <h2>8. Disclaimer of Warranties</h2>
+        <p class="section-title">8. Disclaimer of Warranties</p>
         <p>The App is provided "as is" without any express or implied warranties. We do not guarantee that the App will operate uninterrupted or error-free.</p>
 
-        <h2>9. Limitation of Liability</h2>
+        <p class="section-title">9. Limitation of Liability</p>
         <p>To the maximum extent permitted by law, the developer shall not be liable for any direct, indirect, incidental, special, or consequential damages arising from the use or inability to use the App.</p>
 
-        <h2>10. Changes to Terms</h2>
+        <p class="section-title">10. Changes to Terms</p>
         <p>We may update these Terms of Service from time to time. Updated terms will be posted on this page with an updated "Last updated" date. Continued use of the App constitutes acceptance of the updated terms.</p>
 
-        <h2>11. Governing Law</h2>
+        <p class="section-title">11. Governing Law</p>
         <p>These terms shall be governed by and construed in accordance with the laws of the jurisdiction in which the developer operates.</p>
 
         <div class="contact">
-            <h2>Contact Us</h2>
+            <p class="section-title">Contact Us</p>
             <p>If you have any questions about these Terms of Service, please contact us:</p>
             <p>Email: <a href="mailto:onepage@unclej.io">onepage@unclej.io</a></p>
         </div>
     </main>
 
     <footer>
-        <a href="index-en.html">Home</a>
-        <a href="support-en.html">Support</a>
-        <a href="privacy-en.html">Privacy</a>
-        <div style="margin-top: 16px; font-size: 12px; color: #ccc;">© 2026 Uncle J. All rights reserved.</div>
+        <nav>
+            <a href="index-en.html">Home</a>
+            <a href="support-en.html">Support</a>
+            <a href="privacy-en.html">Privacy Policy</a>
+        </nav>
+        <p class="copyright">© 2026 One Page</p>
     </footer>
 </body>
 </html>

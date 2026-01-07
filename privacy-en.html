@@ -7,140 +7,194 @@
     <meta name="description" content="One Page App Privacy Policy. We collect no data. It's that simple.">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #faf9f7;
+            --text: #1a1a1a;
+            --text-light: #666;
+            --text-muted: #999;
+            --border: #e8e6e0;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", Georgia, sans-serif;
+            font-family: Georgia, "Times New Roman", serif;
             line-height: 1.8;
-            color: #2c2c2c;
-            background: #faf9f7;
+            color: var(--text);
+            background: var(--bg);
             min-height: 100vh;
         }
+
+        .lang-switch {
+            position: fixed;
+            top: 24px;
+            right: 24px;
+            font-size: 14px;
+            z-index: 100;
+        }
+
+        .lang-switch a {
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+
+        .lang-switch a:hover {
+            color: var(--text);
+        }
+
         main {
             max-width: 640px;
             margin: 0 auto;
-            padding: 80px 32px 64px;
+            padding: 80px 24px 64px;
         }
+
         .breadcrumb {
             font-size: 14px;
-            color: #999;
-            margin-bottom: 40px;
-        }
-        .breadcrumb a {
-            color: #666;
-            text-decoration: none;
-        }
-        .breadcrumb a:hover { color: #1a1a1a; }
-        h1 {
-            font-size: 36px;
-            font-weight: 400;
-            letter-spacing: 0.02em;
-            margin-bottom: 16px;
-            color: #1a1a1a;
-        }
-        .updated {
-            font-size: 14px;
-            color: #999;
+            color: var(--text-muted);
             margin-bottom: 48px;
         }
 
-        /* Hero statement */
-        .hero-statement {
-            background: #f0f5f0;
-            padding: 40px;
-            border-left: 4px solid #4a9;
-            margin-bottom: 48px;
+        .breadcrumb a {
+            color: var(--text-light);
+            text-decoration: none;
         }
+
+        .breadcrumb a:hover {
+            color: var(--text);
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 400;
+            margin-bottom: 16px;
+        }
+
+        .updated {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 64px;
+        }
+
+        /* Hero Statement */
+        .hero-statement {
+            background: #fffef9;
+            border: 1px solid var(--border);
+            padding: 48px;
+            margin-bottom: 64px;
+            text-align: center;
+        }
+
         .hero-statement p {
-            font-size: 20px;
-            color: #2a5;
-            font-weight: 500;
-            margin: 0;
+            font-size: 24px;
+            font-weight: 400;
         }
 
         /* Content */
-        h2 {
-            font-size: 20px;
-            font-weight: 500;
+        .section-title {
+            font-size: 12px;
+            color: var(--text-muted);
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
             margin-top: 48px;
-            margin-bottom: 16px;
-            color: #1a1a1a;
+            margin-bottom: 24px;
         }
+
         p {
             font-size: 16px;
-            color: #444;
+            color: var(--text-light);
             margin-bottom: 16px;
         }
+
+        p strong {
+            color: var(--text);
+            font-weight: 400;
+        }
+
         ul {
             margin-left: 24px;
             margin-bottom: 16px;
         }
+
         li {
             font-size: 16px;
-            color: #444;
+            color: var(--text-light);
             margin-bottom: 8px;
         }
 
-        /* Summary box */
+        /* Summary Box */
         .summary-box {
             background: #f5f4f0;
-            padding: 32px;
-            margin-top: 48px;
+            padding: 40px;
+            margin-top: 64px;
         }
+
         .summary-box h3 {
-            font-size: 16px;
-            font-weight: 500;
-            margin-bottom: 16px;
-            color: #1a1a1a;
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--text-muted);
+            letter-spacing: 0.1em;
+            margin-bottom: 24px;
         }
+
         .summary-box ul {
             list-style: none;
             margin: 0;
         }
+
         .summary-box li {
-            padding: 8px 0;
-            padding-left: 24px;
+            padding: 12px 0;
+            padding-left: 28px;
             position: relative;
+            border-bottom: 1px solid var(--border);
         }
+
+        .summary-box li:last-child {
+            border-bottom: none;
+        }
+
         .summary-box li::before {
             content: "✓";
             position: absolute;
             left: 0;
-            color: #4a9;
-            font-weight: bold;
+            color: var(--text);
         }
 
         /* Contact */
         .contact {
-            margin-top: 48px;
-            padding-top: 32px;
-            border-top: 1px solid #e0ded8;
-        }
-        .contact a {
-            color: #666;
+            margin-top: 64px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border);
         }
 
+        .contact a {
+            color: var(--text-light);
+        }
+
+        /* Footer */
         footer {
             text-align: center;
-            padding: 48px 24px;
-            color: #999;
-            font-size: 14px;
-            border-top: 1px solid #e0ded8;
-            margin-top: 64px;
-        }
-        footer a {
-            color: #666;
-            text-decoration: none;
-            margin: 0 16px;
+            padding: 64px 24px;
+            border-top: 1px solid var(--border);
+            margin-top: 80px;
         }
 
-        .lang-switch {
-            position: absolute;
-            top: 24px;
-            right: 24px;
+        footer nav {
+            margin-bottom: 24px;
+        }
+
+        footer a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin: 0 16px;
             font-size: 14px;
         }
-        .lang-switch a {
-            color: #999;
-            text-decoration: none;
+
+        footer a:hover {
+            color: var(--text);
+        }
+
+        footer .copyright {
+            font-size: 12px;
+            color: var(--text-muted);
         }
     </style>
 </head>
@@ -156,14 +210,14 @@
         <p class="updated">Last updated: January 7, 2026</p>
 
         <div class="hero-statement">
-            <p>One Page collects no data. It's that simple.</p>
+            <p>One Page collects no data.<br>It's that simple.</p>
         </div>
 
-        <h2>What We Collect</h2>
+        <p class="section-title">What We Collect</p>
         <p><strong>Nothing.</strong></p>
         <p>One Page is a fully local application. We do not collect, store, or transmit any user data.</p>
 
-        <h2>Data Storage</h2>
+        <p class="section-title">Data Storage</p>
         <p>All data in One Page is stored locally on your device:</p>
         <ul>
             <li>Favorite cards — stored in your device's local storage</li>
@@ -171,7 +225,7 @@
         </ul>
         <p>We cannot access this data and do not attempt to.</p>
 
-        <h2>Network Connections</h2>
+        <p class="section-title">Network Connections</p>
         <p>One Page does not require an internet connection to function. The only network activity is:</p>
         <ul>
             <li>App Store purchase verification (handled by Apple)</li>
@@ -179,7 +233,7 @@
         </ul>
         <p>These network requests are handled by Apple's system frameworks. We do not participate in or monitor them.</p>
 
-        <h2>Third-Party Services</h2>
+        <p class="section-title">Third-Party Services</p>
         <p>One Page contains no third-party SDKs, analytics tools, or advertising frameworks.</p>
         <p>We do not use:</p>
         <ul>
@@ -189,13 +243,13 @@
             <li>Social media SDKs</li>
         </ul>
 
-        <h2>Accounts</h2>
+        <p class="section-title">Accounts</p>
         <p>One Page does not require account creation and does not support account features. No login, no registration, no user profiles.</p>
 
-        <h2>Children's Privacy</h2>
+        <p class="section-title">Children's Privacy</p>
         <p>One Page does not collect data from anyone, including children. The app content is suitable for all ages.</p>
 
-        <h2>Changes to This Policy</h2>
+        <p class="section-title">Changes to This Policy</p>
         <p>If we update this privacy policy, we will post the updated version on this page. Since we collect no data, there's really nothing to change.</p>
 
         <div class="summary-box">
@@ -210,17 +264,19 @@
         </div>
 
         <div class="contact">
-            <h2>Contact Us</h2>
+            <p class="section-title">Contact Us</p>
             <p>If you have any questions about this privacy policy, please contact us:</p>
             <p>Email: <a href="mailto:onepage@unclej.io">onepage@unclej.io</a></p>
         </div>
     </main>
 
     <footer>
-        <a href="index-en.html">Home</a>
-        <a href="support-en.html">Support</a>
-        <a href="terms-en.html">Terms</a>
-        <div style="margin-top: 16px; font-size: 12px; color: #ccc;">© 2026 Uncle J. All rights reserved.</div>
+        <nav>
+            <a href="index-en.html">Home</a>
+            <a href="support-en.html">Support</a>
+            <a href="terms-en.html">Terms of Service</a>
+        </nav>
+        <p class="copyright">© 2026 One Page</p>
     </footer>
 </body>
 </html>
