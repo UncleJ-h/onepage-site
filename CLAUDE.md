@@ -39,10 +39,11 @@ onepage-site/
 
 ## Deployment
 
-- **Host**: GitHub Pages
-- **URL**: https://unclej-h.github.io/onepage-site/
+- **Host**: GitHub Pages + Cloudflare DNS
+- **URL**: https://onepage.theunclej.com/
 - **Branch**: main
 - **Build**: 无需构建，直接部署静态文件
+- **CNAME**: `onepage.theunclej.com`
 
 ## Design Tokens
 
