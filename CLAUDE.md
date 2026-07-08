@@ -3,7 +3,7 @@ HTML + CSS + GitHub Pages
 
 ## Philosophy
 
-原研哉式美学：温暖纸质背景 #faf9f7，极简排版，留白呼吸
+黑橙宋刻美学：黑色背景、暖白文字、橙色重点，极简排版
 双语支持：中文主站 + 英文镜像
 零依赖：纯静态 HTML，无构建流程
 
@@ -13,7 +13,7 @@ HTML + CSS + GitHub Pages
 onepage-site/
 ├── CLAUDE.md           # L1 项目宪法
 ├── README.md           # 部署说明
-├── images/             # [待填充] 截图、图标资源
+├── images/             # App 截图、分享海报资源
 │
 ├── index.html          # 中文落地页 - 产品介绍、定价、隐私承诺
 ├── index-en.html       # 英文落地页 - English landing page
@@ -48,12 +48,14 @@ onepage-site/
 ## Design Tokens
 
 ```css
---bg: #faf9f7;           /* 温暖纸质背景 */
---text: #2c2c2c;         /* 主文字 */
---text-light: #666;      /* 次要文字 */
---border: #e0ded8;       /* 分割线 */
---font-cn: "Songti SC";  /* 中文宋体 */
---font-en: Georgia;      /* 英文衬线 */
+--bg: #000;                              /* 黑色背景 */
+--text: #f7f4ec;                         /* 暖白主文字 */
+--text-light: rgba(247, 244, 236, 0.72); /* 次要文字 */
+--text-muted: rgba(247, 244, 236, 0.46); /* 弱化文字 */
+--border: rgba(242, 109, 20, 0.28);      /* 橙色边线 */
+--accent: #f26d14;                       /* 橙色重点 */
+--font-cn: "Songti SC";                  /* 中文宋体 */
+--font-en: Georgia;                      /* 英文衬线 */
 ```
 
 ## Related Repos

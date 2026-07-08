@@ -11,11 +11,12 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            --bg: #faf9f7;
-            --text: #1a1a1a;
-            --text-light: #666;
-            --text-muted: #999;
-            --border: #e8e6e0;
+            --bg: #000;
+            --text: #f7f4ec;
+            --text-light: rgba(247, 244, 236, 0.72);
+            --text-muted: rgba(247, 244, 236, 0.46);
+            --border: rgba(242, 109, 20, 0.28);
+            --accent: #f26d14;
         }
 
         body {
@@ -61,25 +62,27 @@
         /* Hero */
         .hero {
             text-align: center;
+            padding-top: 80px;
+            padding-bottom: 56px;
         }
 
         .hero h1 {
             font-size: 96px;
             font-weight: 400;
             letter-spacing: 0.05em;
-            margin-bottom: 48px;
+            margin-bottom: 32px;
         }
 
         .hero .tagline {
             font-size: 24px;
             color: var(--text-light);
             line-height: 2.4;
-            margin-bottom: 80px;
+            margin-bottom: 48px;
         }
 
         /* Card Preview */
         .card-preview {
-            background: #fffef9;
+            background: #050505;
             border: 1px solid var(--border);
             padding: 80px 56px;
             max-width: 400px;
@@ -97,6 +100,38 @@
             font-size: 13px;
             color: var(--text-muted);
             text-align: right;
+        }
+
+        .hero-visuals {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 24px;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        .phone-shot {
+            margin: 0;
+            overflow: hidden;
+            border-radius: 28px;
+            background: #000;
+            box-shadow: 0 24px 64px rgba(242, 109, 20, 0.12);
+        }
+
+        .phone-shot img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .phone-shot.app-shot {
+            width: 190px;
+        }
+
+        .phone-shot.share-shot {
+            width: 216px;
+            transform: translateY(24px);
         }
 
         /* Insight Sections */
@@ -204,8 +239,8 @@
             display: inline-flex;
             align-items: center;
             gap: 12px;
-            background: var(--text);
-            color: var(--bg);
+            background: var(--accent);
+            color: #000;
             padding: 20px 48px;
             text-decoration: none;
             font-size: 16px;
@@ -280,11 +315,16 @@
         /* Responsive */
         @media (max-width: 600px) {
             section { padding: 80px 20px; }
+            .hero { padding-top: 56px; padding-bottom: 40px; }
             .hero h1 { font-size: 56px; }
             .hero .tagline { font-size: 20px; }
             .insight h2 { font-size: 28px; }
             .card-preview { padding: 56px 32px; }
             .card-preview .quote { font-size: 18px; }
+            .hero-visuals { gap: 14px; }
+            .phone-shot { border-radius: 18px; }
+            .phone-shot.app-shot { width: min(38vw, 172px); }
+            .phone-shot.share-shot { width: min(41vw, 188px); transform: translateY(16px); }
             .contrast { grid-template-columns: 1fr; gap: 40px; }
             .pricing .price { font-size: 56px; }
         }
@@ -303,9 +343,13 @@
             Get a line.<br>
             Close.
         </p>
-        <div class="card-preview">
-            <p class="quote">"No investigation,<br>no right to speak."</p>
-            <p class="source">—"Oppose Book Worship"</p>
+        <div class="hero-visuals">
+            <figure class="phone-shot app-shot">
+                <img src="images/onepage-app-front.png" alt="One Page app home screenshot">
+            </figure>
+            <figure class="phone-shot share-shot">
+                <img src="images/onepage-share-poster.png" alt="One Page share poster screenshot">
+            </figure>
         </div>
     </section>
 

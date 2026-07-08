@@ -14,21 +14,21 @@ This repository contains the public website for One Page.
 
 ## Links
 
-- **Website**: https://unclej-h.github.io/onepage-site/
-- **App Store**: Coming soon
+- **Website**: https://onepage.theunclej.com/
+- **App Store**: https://apps.apple.com/app/id6757466992
 
 ## Deploy
 
 This site is designed to be hosted on GitHub Pages.
 
 ```bash
-# Push to GitHub and enable Pages in repo settings
+# Push to GitHub Pages; Cloudflare DNS points onepage.theunclej.com here
 git add .
-git commit -m "Initial website"
+git commit -m "Update website"
 git push origin main
 ```
 
 ---
 
 One Page (一页) is a commercial iOS application.
-For support, contact: onepage@unclej.io
+For support, contact: onepage@theunclej.com
