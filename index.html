@@ -11,11 +11,13 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            --bg: #000;
-            --text: #f7f4ec;
-            --text-light: rgba(247, 244, 236, 0.72);
-            --text-muted: rgba(247, 244, 236, 0.46);
-            --border: rgba(242, 109, 20, 0.28);
+            --bg: #f7f4ec;
+            --surface: #fffaf2;
+            --text: #15120d;
+            --text-light: rgba(21, 18, 13, 0.68);
+            --text-muted: rgba(21, 18, 13, 0.42);
+            --border: rgba(21, 18, 13, 0.12);
+            --accent-border: rgba(242, 109, 20, 0.28);
             --accent: #f26d14;
         }
 
@@ -71,6 +73,7 @@
             font-weight: 400;
             letter-spacing: 0.2em;
             margin-bottom: 32px;
+            color: var(--text);
         }
 
         .hero .tagline {
@@ -82,8 +85,8 @@
 
         /* Card Preview */
         .card-preview {
-            background: #050505;
-            border: 1px solid var(--border);
+            background: var(--surface);
+            border: 1px solid var(--accent-border);
             padding: 80px 56px;
             max-width: 400px;
             margin: 0 auto;
@@ -115,7 +118,7 @@
             overflow: hidden;
             border-radius: 28px;
             background: #000;
-            box-shadow: 0 24px 64px rgba(242, 109, 20, 0.12);
+            box-shadow: 0 28px 70px rgba(21, 18, 13, 0.18);
         }
 
         .phone-shot img {
@@ -167,7 +170,7 @@
         }
 
         .insight .counter span {
-            color: var(--text);
+            color: var(--accent);
         }
 
         /* Contrast Section */
@@ -320,10 +323,16 @@
             .insight h2 { font-size: 28px; }
             .card-preview { padding: 56px 32px; }
             .card-preview .quote { font-size: 18px; }
-            .hero-visuals { gap: 14px; }
+            .hero-visuals {
+                width: 100%;
+                max-width: 230px;
+                flex-direction: column;
+                align-items: center;
+                gap: 18px;
+            }
             .phone-shot { border-radius: 18px; }
-            .phone-shot.app-shot { width: min(38vw, 172px); }
-            .phone-shot.share-shot { width: min(41vw, 188px); transform: translateY(16px); }
+            .phone-shot.app-shot { width: 100%; max-width: 172px; transform: translateX(-18px); }
+            .phone-shot.share-shot { width: 100%; max-width: 188px; transform: translateX(18px); }
             .contrast { grid-template-columns: 1fr; gap: 40px; }
             .pricing .price { font-size: 56px; }
         }
